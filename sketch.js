@@ -1,6 +1,12 @@
 function setup() {
   createCanvas(600, 600);
-  background(255, 137, 97);
+}
+
+function draw() {
+  let r = map(mouseX, 0, width, 0, 255);
+  let g = 100;
+  let b = map(mouseY, 0, height, 0, 255);
+  background(r, g, b);
   noStroke();
   
   fill(82, 118, 124);
@@ -21,4 +27,14 @@ function setup() {
 
   fill(185, 194, 166); 
   quad(180, 600, 400, 400, 600, 400, 600, 600);
+
+  fill(0);
+  quad(525, 550, 600, 550, 600, 600, 525, 600);
+  quad(200, 150, 200, 100, 230, 95, 230, 160);
+  quad(475, 170, 520, 173, 800, 450, 600, 300);
+  quad(450, 75, 450, 40, 485, 35, 485, 83);
+  strokeWeight(8);
+  stroke(0);
+  line(230, 105, 246, 108);
+  line(485, 45, 497, 48);
 }
